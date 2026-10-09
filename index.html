@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" class="scroll-smooth dark">
 <head>
   
@@ -92,12 +92,12 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 </header>
 
 <main id="main" class="flex-grow">
-<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16">
+<section id="hero" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden pt-36 sm:pt-44 pb-20">
   <div class="absolute inset-0" aria-hidden="true">
-    <div class="hero-slide active"><img src="https://cdn.picflow.com/assets/images/resized/1920x1282/e1875571-5311-439b-bd66-19c6c9047d96.jpg" alt="" class="w-full h-full object-cover opacity-70"></div>
-    <div class="hero-slide"><img loading="lazy" src="https://cdn.picflow.com/assets/images/resized/1920x1280/823b0d6a-82d9-4295-86eb-fdbc1032ae43.jpg" alt="" class="w-full h-full object-cover opacity-70"></div>
-    <div class="hero-slide"><img loading="lazy" src="https://cdn.picflow.com/assets/images/resized/1920x1282/e020b22a-029d-46b8-a903-6fddad5fabba.jpg" alt="" class="w-full h-full object-cover opacity-70"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-warm-950/80 via-warm-950/35 to-warm-950/20"></div>
+    <div class="hero-slide active"><img src="https://cdn.picflow.com/assets/images/resized/1920x1282/e1875571-5311-439b-bd66-19c6c9047d96.jpg" alt="" class="w-full h-full object-cover opacity-60"></div>
+    <div class="hero-slide"><img loading="lazy" src="https://cdn.picflow.com/assets/images/resized/1920x1280/823b0d6a-82d9-4295-86eb-fdbc1032ae43.jpg" alt="" class="w-full h-full object-cover opacity-60"></div>
+    <div class="hero-slide"><img loading="lazy" src="https://cdn.picflow.com/assets/images/resized/1920x1282/e020b22a-029d-46b8-a903-6fddad5fabba.jpg" alt="" class="w-full h-full object-cover opacity-60"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-warm-950/90 via-warm-950/40 to-warm-950/15"></div>
   </div>
   <div class="relative z-10 max-w-5xl mx-auto px-6 text-center hero-in">
     <h1 class="text-white leading-none">
@@ -228,7 +228,7 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
       </div>
     </div>
     <div class="glass-panel p-6 sm:p-10 rounded-3xl max-w-4xl mx-auto border-gold-500/30 shadow-2xl reveal">
-      <div class="pb-6 border-b border-white/10"><h3 class="text-xl font-bold text-white" id="calc-title">Tu presupuesto: Quinceaños</h3><p class="text-xs text-slate-300 mt-1">Precios en pesos argentinos. El valor final se confirma al consultar la fecha.</p></div>
+      <div class="pb-6 border-b border-white/10"><h3 class="text-xl font-bold text-white" id="calc-title">Tu presupuesto: Quinceaños</h3><p class="text-xs text-slate-300 mt-1">El valor final se confirma al consultar la fecha.</p></div>
       <div class="py-8 space-y-8">
         <fieldset><legend class="lbl">1. Tipo de cobertura</legend>
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="fmt-group">
@@ -236,25 +236,25 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
             <button type="button" class="opt fmt py-3.5 px-4 rounded-2xl text-xs tracking-wider flex flex-col items-center gap-1" data-fmt="video" aria-pressed="false"><i data-lucide="video" class="w-4 h-4"></i>Solo video</button>
             <button type="button" class="opt fmt py-3.5 px-4 rounded-2xl text-xs tracking-wider flex flex-col items-center gap-1" data-fmt="ambos" aria-pressed="true"><i data-lucide="sparkles" class="w-4 h-4"></i>Foto + video</button>
           </div></fieldset>
-        <fieldset><legend class="lbl">2. Horas de cobertura <span class="text-gold-400 ml-2">$75.000 por hora y por servicio</span></legend>
+        <fieldset><legend class="lbl">2. Horas de cobertura</legend>
           <div class="grid grid-cols-3 gap-3">
             <button type="button" class="opt hrs py-3 px-4 rounded-2xl text-xs tracking-wider" data-h="8" aria-pressed="true">8 horas</button>
             <button type="button" class="opt hrs py-3 px-4 rounded-2xl text-xs tracking-wider" data-h="10" aria-pressed="false">10 horas</button>
             <button type="button" class="opt hrs py-3 px-4 rounded-2xl text-xs tracking-wider" data-h="12" aria-pressed="false">12 horas</button>
           </div></fieldset>
-        <fieldset><legend class="lbl">3. Equipo adicional <span class="text-gold-400 ml-2">$350.000 cada uno</span></legend>
+        <fieldset><legend class="lbl">3. Equipo adicional</legend>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <label id="c-xphoto" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3 text-sm"><input type="checkbox" id="xphoto" class="accent-yellow-500 w-4 h-4">2.º fotógrafo</span><span class="text-xs text-slate-300">+$350.000</span></label>
-            <label id="c-xvideo" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3 text-sm"><input type="checkbox" id="xvideo" class="accent-yellow-500 w-4 h-4">2.º videógrafo</span><span class="text-xs text-slate-300">+$350.000</span></label>
+            <label id="c-xphoto" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3 text-sm"><input type="checkbox" id="xphoto" class="accent-yellow-500 w-4 h-4">2.º fotógrafo</span></label>
+            <label id="c-xvideo" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3 text-sm"><input type="checkbox" id="xvideo" class="accent-yellow-500 w-4 h-4">2.º videógrafo</span></label>
           </div></fieldset>
-        <fieldset><legend class="lbl">4. Books o sesiones previas o posteriores (máx. 2) <span class="text-gold-400 ml-2">$150.000 cada una</span></legend>
+        <fieldset><legend class="lbl">4. Books o sesiones previas o posteriores (máx. 2)</legend>
           <div class="flex items-center justify-between p-4 rounded-2xl bg-warm-900 border border-white/10"><span class="text-sm">Sesiones adicionales</span>
             <div class="flex items-center gap-3"><button type="button" id="books-minus" class="w-9 h-9 rounded-full bg-white/10 hover:bg-gold-400 hover:text-warm-950 font-bold transition-colors" aria-label="Quitar una sesión">−</button><output id="books" class="font-bold text-gold-300 min-w-[20px] text-center" aria-live="polite">0</output><button type="button" id="books-plus" class="w-9 h-9 rounded-full bg-white/10 hover:bg-gold-400 hover:text-warm-950 font-bold transition-colors" aria-label="Agregar una sesión">+</button></div></div></fieldset>
         <fieldset><legend class="lbl">5. Adicionales</legend>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-            <label id="c-express" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3"><input type="checkbox" id="express" class="accent-yellow-500 w-4 h-4">Edición exprés (menos de 72 hs, fotos)</span><span class="text-xs text-slate-300">+$150.000</span></label>
-            <label id="c-live" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3"><input type="checkbox" id="live" class="accent-yellow-500 w-4 h-4">Edición en vivo en la fiesta (video)</span><span class="text-xs text-slate-300">+$350.000</span></label>
-            <label id="c-drone" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer sm:col-span-2"><span class="flex items-center gap-3"><input type="checkbox" id="drone" class="accent-yellow-500 w-4 h-4">Dron con tomas aéreas 4K</span><span class="text-xs text-slate-300">+$150.000</span></label>
+            <label id="c-express" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3"><input type="checkbox" id="express" class="accent-yellow-500 w-4 h-4">Edición exprés (menos de 72 hs, fotos)</span></label>
+            <label id="c-live" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer"><span class="flex items-center gap-3"><input type="checkbox" id="live" class="accent-yellow-500 w-4 h-4">Edición en vivo en la fiesta (video)</span></label>
+            <label id="c-drone" class="flex items-center justify-between p-3.5 rounded-2xl bg-warm-900 border border-white/10 hover:border-gold-500/40 cursor-pointer sm:col-span-2"><span class="flex items-center gap-3"><input type="checkbox" id="drone" class="accent-yellow-500 w-4 h-4">Dron con tomas aéreas 4K</span></label>
           </div></fieldset>
       </div>
       <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
@@ -277,21 +277,13 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
           <div><label class="lbl" for="f-name">Nombre y apellido</label><input class="field" type="text" id="f-name" required autocomplete="name" placeholder="Ej: María Gómez"></div>
           <div><label class="lbl" for="f-phone">WhatsApp</label><input class="field" type="tel" id="f-phone" required autocomplete="tel" placeholder="Ej: 3492 591128"></div>
         </div>
-        <fieldset><legend class="lbl">¿Qué servicio necesitás?</legend>
-          <div class="grid grid-cols-3 gap-3" id="svc-group">
-            <button type="button" class="opt svc py-3 px-4 rounded-xl text-xs tracking-wider" data-v="Solo foto" aria-pressed="false">Solo foto</button>
-            <button type="button" class="opt svc py-3 px-4 rounded-xl text-xs tracking-wider" data-v="Solo video" aria-pressed="false">Solo video</button>
-            <button type="button" class="opt svc py-3 px-4 rounded-xl text-xs tracking-wider" data-v="Foto + video" aria-pressed="true">Foto + video</button>
-          </div></fieldset>
+        
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div><label class="lbl" for="f-type">Evento</label><select class="field" id="f-type"><option>Quinceaños</option><option>Boda</option><option>Graduación</option></select></div>
           <div><label class="lbl" for="f-date">Fecha</label><input class="field" type="date" id="f-date" required></div>
-          <div><label class="lbl" for="f-hours">Horas de cobertura</label><select class="field" id="f-hours"><option value="8 hs">8 horas</option><option value="10 hs">10 horas</option><option value="12 hs">12 horas</option></select></div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div><label class="lbl" for="f-place">Salón</label><input class="field" type="text" id="f-place" placeholder="Ej: Salón Luz y Fuerza"></div>
           <div><label class="lbl" for="f-guests">Cantidad de invitados</label><input class="field" type="number" id="f-guests" min="1" placeholder="Ej: 150"></div>
         </div>
+
         <div><label class="lbl" for="f-msg">Mensaje o detalle del presupuesto</label><textarea class="field resize-none" id="f-msg" rows="4" placeholder="Contanos cualquier detalle o consulta particular."></textarea></div>
         <button type="submit" class="btn w-full py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i>Enviar consulta por WhatsApp</button>
       </form>
@@ -302,10 +294,39 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 
 <footer class="border-t border-white/5 py-12 text-xs text-slate-300">
   <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-    <div class="flex items-center gap-3"><img src="15.png" alt="" width="120" height="32" class="h-8 w-auto opacity-90"><span>Luca Monteserin © <span id="year">2026</span> · Foto y video</span></div>
+    <div class="flex items-center gap-3">
+      <img src="15.png" alt="" width="120" height="32" class="h-8 w-auto opacity-90">
+      <span>Luca Monteserin © <span id="year">2026</span> · Foto y video</span>
+    </div>
     <div class="flex items-center gap-6">
-      <a href="https://instagram.com/lucamonteserin" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 flex items-center gap-1.5"><i data-lucide="instagram" class="w-4 h-4"></i>@lucamonteserin</a>
-      <a id="wa-footer" href="https://wa.me/5493492591128?text=Hola!%20Quisiera%20consultar%20disponibilidad%20para%20un%20evento." target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 flex items-center gap-1.5"><i data-lucide="message-circle" class="w-4 h-4"></i>WhatsApp</a>
+      <!-- Logo Oficial de Instagram en SVG -->
+      <a href="https://instagram.com/lucamonteserin" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none">
+          <defs>
+            <radialGradient id="ig-grad" cx="20%" cy="100%" r="130%">
+              <stop offset="0%" stop-color="#fdf497"/>
+              <stop offset="5%" stop-color="#fdf497"/>
+              <stop offset="45%" stop-color="#fd5949"/>
+              <stop offset="60%" stop-color="#d6249f"/>
+              <stop offset="90%" stop-color="#285AEB"/>
+            </radialGradient>
+          </defs>
+          <rect width="24" height="24" rx="6" fill="url(#ig-grad)"/>
+          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+          <circle cx="12" cy="12" r="4.2" fill="none" stroke="#ffffff" stroke-width="1.8"/>
+          <circle cx="17.2" cy="6.8" r="1.1" fill="#ffffff"/>
+        </svg>
+        <span>@lucamonteserin</span>
+      </a>
+
+      <!-- Logo Oficial de WhatsApp en SVG -->
+      <a id="wa-footer" href="https://wa.me/5493492591128?text=Hola!%20Quisiera%20consultar%20disponibilidad%20para%20un%20evento." target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="16" fill="#25D366"/>
+          <path d="M24.2 8.3C22.1 6.2 19.3 5 16.3 5 10.1 5 5.1 10 5.1 16.2c0 2 .5 4 1.5 5.7L5 27.5l5.8-1.5c1.6.9 3.5 1.4 5.4 1.4h0c6.2 0 11.2-5 11.2-11.2 0-3-1.2-5.8-3.2-7.9zm-7.9 17.2h0c-1.7 0-3.4-.5-4.8-1.3l-.3-.2-3.6 1 .9-3.5-.2-.4c-.9-1.4-1.4-3.1-1.4-4.8 0-5 4.1-9.2 9.2-9.2 2.5 0 4.8 1 6.5 2.7 1.7 1.7 2.7 4 2.7 6.5-.1 5.2-4.2 9.2-9 9.2zm5-6.9c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.2.2-.3.2-.6.1-1.4-.7-2.4-1.4-3.3-3-.2-.3 0-.5.1-.7.1-.1.3-.3.4-.5.1-.2.2-.3.2-.5 0-.2 0-.3-.1-.5s-.6-1.4-.8-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1.2 1.8-1.2 2.9 0 2.3 1.7 4.5 2 4.9.3.4 3.4 5.2 8.2 7.1 2.9 1.1 3.9 1 5.3.8.9-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.6-.3z" fill="#ffffff"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
     </div>
   </div>
 </footer>
@@ -332,31 +353,29 @@ function toast(m){const t=$('#toast');$('#toast-msg').textContent=m;t.classList.
 const go=id=>$(id).scrollIntoView({behavior:'smooth'});
 
 // Header, hero, menú
-addEventListener('scroll',()=>$('#main-header').classList.toggle('scrolled',scrollY>20),{passive:true});
-const slides=$$('.hero-slide');let si=0;
+addEventListener('scroll',()=>$('#main-header').classList.toggle('scrolled',scrollY>20),{passive:true}); const slides=$$('.hero-slide');let si=0;
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(()=>{slides[si].classList.remove('active');si=(si+1)%slides.length;slides[si].classList.add('active')},4500);
 const menu=$('#mobile-menu'),mbtn=$('#menu-btn');
 mbtn.onclick=()=>{const open=menu.classList.toggle('hidden')===false;mbtn.setAttribute('aria-expanded',open)};
 menu.querySelectorAll('a').forEach(a=>a.onclick=()=>{menu.classList.add('hidden');mbtn.setAttribute('aria-expanded','false')});
 
-// Reveal al hacer scroll (solo opacidad y desplazamiento, sin pisar otras transiciones)
+// Reveal al hacer scroll
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1,rootMargin:'0px 0px -40px 0px'});
-$$('.reveal').forEach(el=>io.observe(el));
-// Sección activa en el menú
-const links=$$('header nav a'),spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('current',l.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
+$$('.reveal').forEach(el=>io.observe(el)); const links=$$
+('header nav a'),spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('current',l.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-40% 0px -55% 0px'});
 links.forEach(l=>{const s=$(l.getAttribute('href'));s&&spy.observe(s)});
 
 // Filtros de galería
-$$('.filter').forEach(b=>b.onclick=()=>{const c=b.dataset.cat;setPressed('.filter',x=>x===b);$$('#gallery .card').forEach(i=>i.style.display=(c==='todos'||i.dataset.cat===c)?'':'none')});
+$$('.filter').forEach(b=>b.onclick=()=>{const c=b.dataset.cat;setPressed('.filter',x=>x===b);$$
+('#gallery .card').forEach(i=>i.style.display=(c==='todos'||i.dataset.cat===c)?'':'none')});
 
 // Lightbox accesible
-const lb=$('#lightbox');let lbFrom=null;
-$$('#gallery .card').forEach(c=>c.onclick=()=>{lbFrom=c;$('#lb-img').src=c.dataset.full;$('#lb-img').alt=c.dataset.title;$('#lb-title').textContent=c.dataset.title;$('#lb-desc').textContent=c.dataset.desc;lb.classList.replace('hidden','flex');requestAnimationFrame(()=>{lb.classList.add('open');$('#lb-close').focus()})});
+const lb=$('#lightbox');let lbFrom=null; $$('#gallery .card').forEach(c=>c.onclick=()=>{lbFrom=c;$('#lb-img').src=c.dataset.full;$('#lb-img').alt=c.dataset.title;$('#lb-title').textContent=c.dataset.title;$('#lb-desc').textContent=c.dataset.desc;lb.classList.replace('hidden','flex');requestAnimationFrame(()=>{lb.classList.add('open');$('#lb-close').focus()})});
 function closeLb(){lb.classList.remove('open');setTimeout(()=>{lb.classList.replace('flex','hidden');lbFrom&&lbFrom.focus()},300)}
 $('#lb-close').onclick=closeLb;lb.onclick=e=>{if(e.target===lb)closeLb()};
 addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.classList.contains('hidden'))closeLb()});
 
-// Slider antes / después (la imagen "después" conserva el ancho total del contenedor)
+// Slider antes / después
 (function(){const box=$('#ba'),after=$('#ba-after'),img=after.querySelector('img'),line=$('#ba-line');let drag=false,pos=50;
 const fit=()=>{img.style.width=box.getBoundingClientRect().width+'px'};
 function set(p){pos=Math.max(0,Math.min(100,p));after.style.width=pos+'%';line.style.left=pos+'%';box.setAttribute('aria-valuenow',Math.round(pos))}
@@ -367,7 +386,7 @@ box.addEventListener('pointermove',e=>{if(drag)fromX(e.clientX)});
 box.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')set(pos-5);if(e.key==='ArrowRight')set(pos+5)});
 addEventListener('resize',fit);fit();set(50)})();
 
-// Agenda: solo se muestra "Reservado", sin nombres de clientes
+// Agenda
 const booked=new Set(["2026-10-10","2026-10-12","2026-10-17","2026-11-06","2026-11-07","2026-11-14","2026-11-28","2026-12-05","2026-12-11","2026-12-12","2026-12-26","2027-01-23","2027-02-05","2027-02-07","2027-02-13","2027-02-27","2027-04-24"]);
 const MESES=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 let Y=Math.min(2027,Math.max(2026,today.getFullYear())),M=Y===today.getFullYear()?today.getMonth():0,sel=null;
@@ -387,9 +406,7 @@ function renderCal(){const g=$('#cal-grid');$('#month-title').textContent=`${MES
 function swap(fn){const g=$('#cal-grid');g.classList.add('swap');setTimeout(()=>{fn();g.classList.remove('swap')},150)}
 function pick(key,d){sel=key;renderCal();$('#date-text').textContent=`${d} de ${MESES[M]} de ${Y}`;const b=$('#date-banner');b.classList.remove('hidden');b.classList.add('flex');$('#f-date').value=key}
 $('#prev').onclick=()=>swap(()=>{M--;if(M<0){if(Y===2027){Y=2026;M=11}else M=0}renderCal()});
-$('#next').onclick=()=>swap(()=>{M++;if(M>11){if(Y===2026){Y=2027;M=0}else M=11}renderCal()});
-$$('.yr').forEach(b=>b.onclick=()=>swap(()=>{Y=+b.dataset.y;M=Y===today.getFullYear()?today.getMonth():0;renderCal()}));
-$('#date-confirm').onclick=()=>{go('#contacto');toast('Fecha cargada en el formulario.')};
+$('#next').onclick=()=>swap(()=>{M++;if(M>11){if(Y===2026){Y=2027;M=0}else M=11}renderCal()}); $$('.yr').forEach(b=>b.onclick=()=>swap(()=>{Y=+b.dataset.y;M=Y===today.getFullYear()?today.getMonth():0;renderCal()}));$('#date-confirm').onclick=()=>{go('#contacto');toast('Fecha cargada en el formulario.')};
 
 // Cotizador
 const P={hour:75000,cam:350000,drone:150000,book:150000,express:150000,live:350000};
@@ -402,29 +419,25 @@ function calc(){const f=S.fmt,two=f==='ambos'?2:1,c=id=>$('#'+id).checked;
   if(f!=='video'&&c('express'))t+=P.express;if(f!=='foto'&&c('live'))t+=P.live;if(f!=='foto'&&c('drone'))t+=P.drone;
   $('#total').textContent=ars(t);return t}
 function applyFmt(){const f=S.fmt,show={xphoto:f!=='video',express:f!=='video',xvideo:f!=='foto',live:f!=='foto',drone:f!=='foto'};
-  for(const k in show){$('#c-'+k).style.display=show[k]?'flex':'none';if(!show[k])$('#'+k).checked=false}
-  setPressed('.fmt',b=>b.dataset.fmt===f);calc()}
-$$('.ev').forEach(b=>b.onclick=()=>{S.ev=b.dataset.ev;setPressed('.ev',x=>x===b);$('#calc-title').textContent='Tu presupuesto: '+S.ev;calc()});
-$$('.fmt').forEach(b=>b.onclick=()=>{S.fmt=b.dataset.fmt;applyFmt()});
-$$('.hrs').forEach(b=>b.onclick=()=>{S.h=+b.dataset.h;setPressed('.hrs',x=>x===b);calc()});
+  for(const k in show){$('#c-'+k).style.display=show[k]?'flex':'none';if(!show[k])$('#'+k).checked=false}   setPressed('.fmt',b=>b.dataset.fmt===f);calc()} $$('.ev').forEach(b=>b.onclick=()=>{S.ev=b.dataset.ev;setPressed('.ev',x=>x===b);$('#calc-title').textContent='Tu presupuesto: '+S.ev;calc()});
+$$('.fmt').forEach(b=>b.onclick=()=>{S.fmt=b.dataset.fmt;applyFmt()});$$
+('.hrs').forEach(b=>b.onclick=()=>{S.h=+b.dataset.h;setPressed('.hrs',x=>x===b);calc()});
 $('#books-minus').onclick=()=>{S.books=Math.max(0,S.books-1);$('#books').textContent=S.books;calc()};
 $('#books-plus').onclick=()=>{S.books=Math.min(2,S.books+1);$('#books').textContent=S.books;calc()};
 ['xphoto','xvideo','express','live','drone'].forEach(id=>$('#'+id).onchange=calc);
-function svc(v){$$('.svc').forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v))}
-$$('.svc').forEach(b=>b.onclick=()=>svc(b.dataset.v));
+
 $('#quote-send').onclick=()=>{const t=calc(),ex=[],c=id=>$('#'+id).checked,f=S.fmt;
   if(f!=='video'&&c('xphoto'))ex.push('2.º fotógrafo');if(f!=='foto'&&c('xvideo'))ex.push('2.º videógrafo');
   if(S.books)ex.push(`${S.books} book(s) o sesión(es)`);if(f!=='video'&&c('express'))ex.push('Edición exprés (fotos)');
   if(f!=='foto'&&c('live'))ex.push('Edición en vivo (video)');if(f!=='foto'&&c('drone'))ex.push('Dron');
-  $('#f-type').value=S.ev;svc(FMT[f]);$('#f-hours').value=S.h+' hs';
   $('#f-msg').value=`Presupuesto cotizado:\n• Evento: ${S.ev}\n• Cobertura: ${FMT[f]}\n• Horas: ${S.h} hs\n• Adicionales: ${ex.join(', ')||'Ninguno'}\n• Estimado: ${ars(t)}`;
   go('#contacto');toast('Presupuesto cargado en el formulario.')};
 
-// Formulario → WhatsApp (valida antes de enviar)
+// Formulario → WhatsApp
 $('#f-date').min=todayKey;
 $('#form').addEventListener('submit',e=>{e.preventDefault();const f=e.target;if(!f.reportValidity())return;
-  const v=id=>$('#'+id).value.trim(),sv=$('.svc[aria-pressed=true]').dataset.v;
-  const txt=`Hola! Mi nombre es *${v('f-name')}*. Quisiera consultar disponibilidad y presupuesto:\n\n🎉 *Evento:* ${v('f-type')}\n🎬 *Servicio:* ${sv}\n📅 *Fecha:* ${v('f-date')}\n⏱️ *Horas:* ${v('f-hours')}\n🏛️ *Salón:* ${v('f-place')||'A definir'}\n👥 *Invitados:* ${v('f-guests')||'A definir'}\n📞 *WhatsApp:* ${v('f-phone')}\n\n💬 *Detalle:*\n${v('f-msg')||'Sin detalles adicionales'}`;
+  const v=id=>$('#'+id).value.trim();
+  const txt=`Hola! Mi nombre es *${v('f-name')}*. Quisiera consultar disponibilidad:\n\n📅 *Fecha:* ${v('f-date')}\n🏛️ *Salón:* ${v('f-place')||'A definir'}\n👥 *Invitados:* ${v('f-guests')||'A definir'}\n📞 *WhatsApp:* ${v('f-phone')}\n\n💬 *Mensaje / Detalle:*\n${v('f-msg')||'Sin detalles adicionales'}`;
   window.open(`https://wa.me/${WA}?text=${encodeURIComponent(txt)}`,'_blank','noopener');toast('Abriendo WhatsApp…')});
 
 $('#year').textContent=today.getFullYear();
