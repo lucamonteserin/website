@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Método, Estilo y Equipo · Luca Monteserin</title>
+  
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script>
+  tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Plus Jakarta Sans','system-ui','sans-serif']},colors:{gold:{300:'#fff',400:'#e6c875',500:'#d4af37'},warm:{950:'#0c0b0a',900:'#141311',800:'#1d1b18'}}}}}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
+
+<header id="main-header" class="fixed top-0 z-40 w-full scrolled">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" aria-label="Luca Monteserin, inicio"><img src="15.png" alt="Luca Monteserin" width="160" height="48" class="h-10 sm:h-12 w-auto contrast-125"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-xs tracking-widest text-slate-200 font-medium" aria-label="Principal">
+      <a class="nav-link" href="index.html#proyectos">Proyectos</a>
+      <a class="nav-link current" href="metodo.html">Método & Equipo</a>
+      <a class="nav-link" href="galeria.html">Galería</a>
+      <a class="nav-link" href="index.html#agenda">Agenda</a>
+      <a class="nav-link" href="index.html#presupuesto">Presupuesto</a>
+      <a class="nav-link" href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="index.html#presupuesto" class="btn hidden sm:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 rounded-full"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
+      <button id="menu-btn" class="lg:hidden p-2 text-slate-200" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden glass-panel px-6 py-6 space-y-4 text-sm font-medium tracking-widest">
+    <a href="index.html#proyectos" class="block">Proyectos</a>
+    <a href="metodo.html" class="block text-gold-400">Método & Equipo</a>
+    <a href="galeria.html" class="block">Galería</a>
+    <a href="index.html#agenda" class="block">Agenda</a>
+    <a href="index.html#presupuesto" class="block">Presupuesto</a>
+    <a href="index.html#contacto" class="block">Contacto</a>
+  </div>
+</header>
+
+<main class="flex-grow pt-32 pb-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    
+    <!-- Hero Método -->
+    <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+      <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-gold-400 bg-gold-500/10 px-4 py-1.5 rounded-full border border-gold-500/20">Filosofía & Equipo Humano</span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-6 leading-tight">
+        Nuestro Método, <span class="gold-text">Estilo & Profesionales</span>
+      </h1>
+      <p class="text-slate-300 text-base leading-relaxed">
+        Detrás de cada imagen hay una mirada coordinada. Conocé cómo planificamos, filmamos, editamos y quiénes hacemos posible que tu gran noche quede registrada para siempre.
+      </p>
+    </div>
+
+    <!-- Bloque 1: Luca y la Filosofía -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-28">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6 leading-tight">Dirección de Autor: Luca Monteserin</h2>
+        <p class="text-slate-300 text-base leading-relaxed mb-6">
+          Entiendo la fotografía y el video como un único lenguaje armónico. Lejos de las viejas coberturas invasivas con luces deslumbrantes o poses armadas cada dos minutos, nuestro objetivo es acompañar sin entorpecer.
+        </p>
+        <p class="text-slate-300 text-base leading-relaxed mb-8">
+          Desde la primera reunión previa hasta el master final, dirijo cada proyecto asegurando coherencia estética, ritmo ágil y la naturalidad que merecen los momentos irrepetibles.
+        </p>
+        
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl glass-panel text-center">
+            <span class="text-3xl font-bold text-gold-400">+100</span>
+            <p class="text-xs text-slate-300 mt-1 uppercase tracking-wider">Eventos Dirigidos</p>
+          </div>
+          <div class="p-4 rounded-2xl glass-panel text-center">
+            <span class="text-3xl font-bold text-gold-400">8 Años</span>
+            <p class="text-xs text-slate-300 mt-1 uppercase tracking-wider">De Trayectoria</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+          <img src="DSC_8284.png" alt="Luca Monteserin" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-transparent to-transparent"></div>
+          <figure class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-2xl">
+            <blockquote class="text-sm text-gold-300 font-medium">"No creamos recuerdos artificiales; capturamos la emoción real tal como la viviste."</blockquote>
+            <figcaption class="text-xs text-slate-300 tracking-widest mt-2">Luca Monteserin · Director Creativo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloque 2: El Equipo Profesional -->
+    <div class="mb-28 border-t border-white/10 pt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mb-4">El Equipo de Trabajo</h2>
+        <p class="text-slate-300 text-sm">Profesionales de confianza que operan con sincronía y equipos técnicos de última generación.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-8 rounded-3xl reveal flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6">
+              <i data-lucide="camera" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Segundos Fotógrafos</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Mientras la lente principal sigue a los protagonistas, el segundo fotógrafo captura reacciones simultáneas, abrazos espontáneos y el ambiente en las mesas.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gold-400 uppercase tracking-widest mt-6">Perspectiva Dinámica</span>
+        </div>
+
+        <div class="glass-panel p-8 rounded-3xl reveal flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6">
+              <i data-lucide="video" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Filmmakers 4K & Drone</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Cámaras mirrorless de alta gama, estabilizadores electrónicos (gimbals), micrófonos de solapa inalámbricos y pilotos certificados de dron para planos aéreos de cine.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gold-400 uppercase tracking-widest mt-6">Tecnología de Cine</span>
+        </div>
+
+        <div class="glass-panel p-8 rounded-3xl reveal flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6">
+              <i data-lucide="sliders" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Coloristas & Post-producción</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              El evento no termina cuando se apagan las luces. Nuestro equipo en estudio respalda inmediatamente en doble almacenamiento, clasifica, revela y masteriza el audio.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gold-400 uppercase tracking-widest mt-6">Flujo de Trabajo Seguro</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloque 3: Estilo Visual & Comparador Interactivo -->
+    <div class="border-t border-white/10 pt-20">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mb-3">Estilo Visual & Color Signature</h2>
+        <p class="text-slate-300 text-sm">Nuestro revelado busca tonos de piel naturales, sombras limpias y contrastes atemporales que no pasen de moda con los años.</p>
+      </div>
+
+      <div id="ba" class="ba reveal rounded-3xl shadow-2xl border border-white/10 aspect-[16/9] max-w-5xl mx-auto" role="slider" tabindex="0" aria-label="Comparador antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Foto original sin editar" class="w-full h-full object-cover grayscale contrast-75 brightness-90" draggable="false">
+        <span class="absolute bottom-4 left-4 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-[11px] tracking-widest">Crudo / RAW</span>
+        <div id="ba-after" class="ba-after">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Foto con edición de color" draggable="false">
+          <span class="absolute bottom-4 left-4 z-10 px-3 py-1 rounded-full bg-gold-400 text-warm-950 text-[11px] font-bold tracking-widest">Color Signature</span>
+        </div>
+        <div id="ba-line" class="ba-line"><div class="ba-knob"><i data-lucide="chevrons-left-right" class="w-4 h-4"></i></div></div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="index.html#contacto" class="btn inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Consultar disponibilidad con nuestro equipo</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-12 text-xs text-slate-300">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="15.png" alt="" width="120" height="32" class="h-8 w-auto opacity-90">
+      <span>Luca Monteserin © <span id="year">2026</span> · Foto y video</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="https://instagram.com/lucamonteserin" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 text-white flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+        </svg>
+        <span>@lucamonteserin</span>
+      </a>
+      <a id="wa-footer" href="https://wa.me/5493492591128?text=Hola!%20Quisiera%20consultar%20disponibilidad%20para%20un%20evento." target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 text-white flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.93 7.91 12.11 8.03 12.27C8.16 12.44 9.77 14.93 12.25 15.99C14.31 16.88 14.73 16.7 15.18 16.66C15.62 16.62 16.62 16.07 16.83 15.49C17.03 14.9 17.03 14.4 16.97 14.3C16.91 14.19 16.74 14.13 16.49 14C16.24 13.88 15.01 13.27 14.78 13.19C14.56 13.1 14.39 13.06 14.23 13.31C14.06 13.56 13.59 14.13 13.45 14.3C13.31 14.46 13.17 14.48 12.92 14.36C12.67 14.23 11.87 13.97 10.93 13.13C10.19 12.47 9.69 11.66 9.55 11.41C9.41 11.16 9.53 11.03 9.66 10.9C9.77 10.79 9.91 10.61 10.03 10.46C10.16 10.32 10.2 10.22 10.28 10.05C10.37 9.88 10.32 9.74 10.26 9.62C10.2 9.49 9.73 8.33 9.53 7.86C9.33 7.4 9.14 7.46 8.99 7.45C8.84 7.45 8.68 7.33 8.53 7.33Z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

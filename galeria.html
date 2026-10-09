@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Completa de Trabajos · Luca Monteserin</title>
+  
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script>
+  tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Plus Jakarta Sans','system-ui','sans-serif']},colors:{gold:{300:'#fff',400:'#e6c875',500:'#d4af37'},warm:{950:'#0c0b0a',900:'#141311',800:'#1d1b18'}}}}}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
+
+<header id="main-header" class="fixed top-0 z-40 w-full scrolled">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" aria-label="Luca Monteserin, inicio"><img src="15.png" alt="Luca Monteserin" width="160" height="48" class="h-10 sm:h-12 w-auto contrast-125"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-xs tracking-widest text-slate-200 font-medium" aria-label="Principal">
+      <a class="nav-link" href="index.html#proyectos">Proyectos</a>
+      <a class="nav-link" href="metodo.html">Método & Equipo</a>
+      <a class="nav-link current" href="galeria.html">Galería</a>
+      <a class="nav-link" href="index.html#agenda">Agenda</a>
+      <a class="nav-link" href="index.html#presupuesto">Presupuesto</a>
+      <a class="nav-link" href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="index.html#presupuesto" class="btn hidden sm:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 rounded-full"><i data-lucide="calculator" class="w-4 h-4"></i>Cotizar</a>
+      <button id="menu-btn" class="lg:hidden p-2 text-slate-200" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden glass-panel px-6 py-6 space-y-4 text-sm font-medium tracking-widest">
+    <a href="index.html#proyectos" class="block">Proyectos</a>
+    <a href="metodo.html" class="block">Método & Equipo</a>
+    <a href="galeria.html" class="block text-gold-400">Galería</a>
+    <a href="index.html#agenda" class="block">Agenda</a>
+    <a href="index.html#presupuesto" class="block">Presupuesto</a>
+    <a href="index.html#contacto" class="block">Contacto</a>
+  </div>
+</header>
+
+<main class="flex-grow pt-32 pb-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+    
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-gold-400 bg-gold-500/10 px-4 py-1.5 rounded-full border border-gold-500/20">Archivo Visual Completo</span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-4">Galería de Trabajos</h1>
+      <p class="text-slate-300 text-sm">Explorá nuestras coberturas fotográficas y producciones cinematográficas en video 4K.</p>
+      
+      <!-- Filtro Primario: Categoría de Evento -->
+      <div class="flex flex-wrap justify-center gap-2 mt-8 bg-white/5 p-1.5 rounded-full border border-white/10 max-w-2xl mx-auto" role="group" aria-label="Filtrar por evento">
+        <button class="opt g-cat px-5 py-2 rounded-full text-xs tracking-wider" data-cat="todos" aria-pressed="true">Todos</button>
+        <button class="opt g-cat px-5 py-2 rounded-full text-xs tracking-wider" data-cat="quince" aria-pressed="false">15 Años</button>
+        <button class="opt g-cat px-5 py-2 rounded-full text-xs tracking-wider" data-cat="bodas" aria-pressed="false">Bodas</button>
+        <button class="opt g-cat px-5 py-2 rounded-full text-xs tracking-wider" data-cat="graduaciones" aria-pressed="false">Graduaciones</button>
+        <button class="opt g-cat px-5 py-2 rounded-full text-xs tracking-wider" data-cat="sesiones" aria-pressed="false">Sesiones</button>
+      </div>
+
+      <!-- Filtro Secundario: Formato (Fotos o Videos) -->
+      <div class="flex justify-center gap-3 mt-4" role="group" aria-label="Filtrar por formato">
+        <button class="opt g-type px-6 py-1.5 rounded-full text-xs tracking-wider flex items-center gap-2" data-type="todos" aria-pressed="true">
+          <i data-lucide="layers" class="w-3.5 h-3.5"></i>Todo
+        </button>
+        <button class="opt g-type px-6 py-1.5 rounded-full text-xs tracking-wider flex items-center gap-2" data-type="foto" aria-pressed="false">
+          <i data-lucide="camera" class="w-3.5 h-3.5"></i>Solo Fotos
+        </button>
+        <button class="opt g-type px-6 py-1.5 rounded-full text-xs tracking-wider flex items-center gap-2" data-type="video" aria-pressed="false">
+          <i data-lucide="video" class="w-3.5 h-3.5"></i>Solo Videos
+        </button>
+      </div>
+    </div>
+
+    <!-- Grilla General de Trabajos -->
+    <div id="full-gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- 15 Años: Fotos -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="quince" data-type="foto" onclick="openGalleryImage('https://cdn.picflow.com/assets/images/resized/1920x1280/71e223c0-7fbd-4b2d-b14e-8f84e005a30e.jpg', 'XV Marti - Entrada', 'Fotografía de alta velocidad y show lumínico')">
+        <div class="aspect-[4/5] overflow-hidden"><img src="https://cdn.picflow.com/assets/images/resized/1920x1280/71e223c0-7fbd-4b2d-b14e-8f84e005a30e.jpg" alt="XV Marti" class="w-full h-full object-cover"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · 15 Años</span>
+          <h3 class="text-xl font-bold text-white mt-2">XV Marti</h3>
+          <p class="text-xs text-slate-300 mt-1">Entrada Triunfal</p>
+        </div>
+      </div>
+
+      <!-- 15 Años: Video -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="quince" data-type="video" onclick="openGalleryVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'XV Valentina - Trailer 4K')">
+        <div class="aspect-[4/5] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="XV Valentina Video" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-gold-400 text-warm-950 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+              <i data-lucide="play" class="w-6 h-6 fill-warm-950 ml-0.5"></i>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Video 4K · 15 Años</span>
+          <h3 class="text-xl font-bold text-white mt-2">XV Valentina</h3>
+          <p class="text-xs text-slate-300 mt-1">Trailer Cinematográfico</p>
+        </div>
+      </div>
+
+      <!-- Boda: Foto -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="bodas" data-type="foto" onclick="openGalleryImage('https://cdn.picflow.com/assets/images/resized/1280x1920/e9e9477d-0f40-45f0-8ac5-3b3f902b4778.jpg', 'Boda Facu & Luci', 'Retrato editorial de novios')">
+        <div class="aspect-[4/5] overflow-hidden"><img src="https://cdn.picflow.com/assets/images/resized/1280x1920/e9e9477d-0f40-45f0-8ac5-3b3f902b4778.jpg" alt="Boda Facu y Luci" class="w-full h-full object-cover"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Boda</span>
+          <h3 class="text-xl font-bold text-white mt-2">Facu & Luci</h3>
+          <p class="text-xs text-slate-300 mt-1">Sesión de Novios</p>
+        </div>
+      </div>
+
+      <!-- Boda: Video -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="bodas" data-type="video" onclick="openGalleryVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Boda Sofía & Tomás - Película')">
+        <div class="aspect-[4/5] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" alt="Boda Video" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-gold-400 text-warm-950 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+              <i data-lucide="play" class="w-6 h-6 fill-warm-950 ml-0.5"></i>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Video 4K · Boda</span>
+          <h3 class="text-xl font-bold text-white mt-2">Sofía & Tomás</h3>
+          <p class="text-xs text-slate-300 mt-1">Film Completo + Drone</p>
+        </div>
+      </div>
+
+      <!-- Graduación: Foto -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="graduaciones" data-type="foto" onclick="openGalleryImage('https://cdn.picflow.com/assets/images/resized/1282x1920/447c2c2d-a141-43cf-abaf-e9c0e68af625.jpg', 'Ataliva 2026', 'Colación de grado y diplomas')">
+        <div class="aspect-[4/5] overflow-hidden"><img src="https://cdn.picflow.com/assets/images/resized/1282x1920/447c2c2d-a141-43cf-abaf-e9c0e68af625.jpg" alt="Graduación Ataliva" class="w-full h-full object-cover"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Graduación</span>
+          <h3 class="text-xl font-bold text-white mt-2">Ataliva 2026</h3>
+          <p class="text-xs text-slate-300 mt-1">Gala de Egresados</p>
+        </div>
+      </div>
+
+      <!-- Graduación: Video -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="graduaciones" data-type="video" onclick="openGalleryVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Promo 2026 - Resumen Bajada')">
+        <div class="aspect-[4/5] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80" alt="Video Graduación" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-gold-400 text-warm-950 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+              <i data-lucide="play" class="w-6 h-6 fill-warm-950 ml-0.5"></i>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Video 4K · Graduación</span>
+          <h3 class="text-xl font-bold text-white mt-2">Promo San José</h3>
+          <p class="text-xs text-slate-300 mt-1">Clip Resumen de Fiesta</p>
+        </div>
+      </div>
+
+      <!-- Sesión: Foto -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="sesiones" data-type="foto" onclick="openGalleryImage('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80', 'Book Chiara', 'Sesión en exteriores al atardecer')">
+        <div class="aspect-[4/5] overflow-hidden"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Book Chiara" class="w-full h-full object-cover"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Foto · Sesión</span>
+          <h3 class="text-xl font-bold text-white mt-2">Chiara</h3>
+          <p class="text-xs text-slate-300 mt-1">Book Exterior</p>
+        </div>
+      </div>
+
+      <!-- Sesión: Video -->
+      <div class="g-item card reveal group relative overflow-hidden rounded-3xl bg-warm-900 border border-white/5 cursor-pointer" data-cat="sesiones" data-type="video" onclick="openGalleryVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Pre-XV Valentina - Fashion Film')">
+        <div class="aspect-[4/5] overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Video Sesión" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-14 h-14 rounded-full bg-gold-400 text-warm-950 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+              <i data-lucide="play" class="w-6 h-6 fill-warm-950 ml-0.5"></i>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-warm-950/20 to-transparent"></div>
+        <div class="absolute bottom-0 inset-x-0 p-6">
+          <span class="text-[10px] tracking-widest text-gold-300 bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">Video 4K · Sesión</span>
+          <h3 class="text-xl font-bold text-white mt-2">Valentina</h3>
+          <p class="text-xs text-slate-300 mt-1">Fashion Film & Reel</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Final hacia Consulta -->
+    <div class="mt-20 text-center border-t border-white/10 pt-16">
+      <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4">¿Te gustó lo que viste?</h3>
+      <p class="text-slate-300 text-sm mb-8">Consultá si tu fecha está libre para coordinar tu cobertura.</p>
+      <a href="index.html#contacto" class="btn inline-flex items-center gap-2 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
+        <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <span>Consultar fecha por WhatsApp</span>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Modal de Video -->
+<div id="video-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/90 backdrop-blur-md" role="dialog" aria-modal="true">
+  <div class="max-w-4xl w-full bg-warm-900 rounded-3xl overflow-hidden relative border border-white/10 shadow-2xl">
+    <button onclick="closeGalleryVideo()" class="absolute top-4 right-4 z-20 p-2.5 text-white bg-black/60 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-colors" aria-label="Cerrar video">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+    <div class="aspect-video w-full">
+      <iframe id="video-iframe" class="w-full h-full" src="" title="Video reproductor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de Foto (Lightbox) -->
+<div id="img-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/95 backdrop-blur-xl" role="dialog" aria-modal="true">
+  <button onclick="closeGalleryImage()" class="absolute top-6 right-6 p-3 text-white bg-white/10 rounded-full hover:bg-gold-400 hover:text-warm-950 transition-colors" aria-label="Cerrar imagen">
+    <i data-lucide="x" class="w-6 h-6"></i>
+  </button>
+  <div class="max-w-5xl w-full flex flex-col items-center">
+    <img id="g-img-target" src="" alt="" class="max-h-[75vh] w-auto object-contain rounded-2xl shadow-2xl border border-white/10">
+    <h3 id="g-title-target" class="text-2xl font-bold text-white mt-6 mb-1"></h3>
+    <p id="g-desc-target" class="text-sm text-slate-300 text-center"></p>
+  </div>
+</div>
+
+<footer class="border-t border-white/5 py-12 text-xs text-slate-300">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="15.png" alt="" width="120" height="32" class="h-8 w-auto opacity-90">
+      <span>Luca Monteserin © <span id="year">2026</span> · Foto y video</span>
+    </div>
+    <div class="flex items-center gap-6">
+      <a href="https://instagram.com/lucamonteserin" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 text-white flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+        </svg>
+        <span>@lucamonteserin</span>
+      </a>
+      <a id="wa-footer" href="https://wa.me/5493492591128?text=Hola!%20Quisiera%20consultar%20disponibilidad%20para%20un%20evento." target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 text-white flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.93 7.91 12.11 8.03 12.27C8.16 12.44 9.77 14.93 12.25 15.99C14.31 16.88 14.73 16.7 15.18 16.66C15.62 16.62 16.62 16.07 16.83 15.49C17.03 14.9 17.03 14.4 16.97 14.3C16.91 14.19 16.74 14.13 16.49 14C16.24 13.88 15.01 13.27 14.78 13.19C14.56 13.1 14.39 13.06 14.23 13.31C14.06 13.56 13.59 14.13 13.45 14.3C13.31 14.46 13.17 14.48 12.92 14.36C12.67 14.23 11.87 13.97 10.93 13.13C10.19 12.47 9.69 11.66 9.55 11.41C9.41 11.16 9.53 11.03 9.66 10.9C9.77 10.79 9.91 10.61 10.03 10.46C10.16 10.32 10.2 10.22 10.28 10.05C10.37 9.88 10.32 9.74 10.26 9.62C10.2 9.49 9.73 8.33 9.53 7.86C9.33 7.4 9.14 7.46 8.99 7.45C8.84 7.45 8.68 7.33 8.53 7.33Z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+let activeCat = 'todos';
+let activeType = 'todos';
+
+function filterGallery() {
+  const items = document.querySelectorAll('.g-item');
+  items.forEach(item => {
+    const matchesCat = activeCat === 'todos' || item.dataset.cat === activeCat;
+    const matchesType = activeType === 'todos' || item.dataset.type === activeType;
+    item.style.display = (matchesCat && matchesType) ? 'block' : 'none';
+  });
+}
+
+document.querySelectorAll('.g-cat').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.g-cat').forEach(b => b.setAttribute('aria-pressed', b === btn));
+    activeCat = btn.dataset.cat;
+    filterGallery();
+  };
+});
+
+document.querySelectorAll('.g-type').forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll('.g-type').forEach(b => b.setAttribute('aria-pressed', b === btn));
+    activeType = btn.dataset.type;
+    filterGallery();
+  };
+});
+
+// Modales de Galería
+function openGalleryVideo(url) {
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-iframe');
+  iframe.src = url;
+  modal.classList.replace('hidden', 'flex');
+}
+function closeGalleryVideo() {
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-iframe');
+  iframe.src = '';
+  modal.classList.replace('flex', 'hidden');
+}
+
+function openGalleryImage(url, title, desc) {
+  const modal = document.getElementById('img-modal');
+  document.getElementById('g-img-target').src = url;
+  document.getElementById('g-title-target').textContent = title;
+  document.getElementById('g-desc-target').textContent = desc;
+  modal.classList.replace('hidden', 'flex');
+}
+function closeGalleryImage() {
+  document.getElementById('img-modal').classList.replace('flex', 'hidden');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.lucide) lucide.createIcons();
+});
+</script>
+<script src="main.js"></script>
+</body>
+</html>
