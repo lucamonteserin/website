@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipo & Método · Luca Monteserin</title>
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Equipo & Método · Luca Monteserin">
+  <meta property="og:description" content="Conocé nuestro método de trabajo, edición y el equipo profesional detrás de cada cobertura.">
+  <meta property="og:image" content="https://lucamonteserin.netlify.app/DSC_8284.png">
+    
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script>
+  tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{sans:['Plus Jakarta Sans','system-ui','sans-serif']},colors:{gold:{300:'#fff',400:'#e6c875',500:'#d4af37'},warm:{950:'#0c0b0a',900:'#141311',800:'#1d1b18'}}}}}
+  </script>
+  <style>
+  :root{--ease:cubic-bezier(.16,1,.3,1)}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#0c0b0a}::-webkit-scrollbar-thumb{background:#2a2723;border-radius:9999px}
+  :focus-visible{outline:2px solid #e6c875;outline-offset:3px}
+  .glass-panel{background:rgba(23,21,18,.6);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.07)}
+  .gold-text{background:linear-gradient(135deg,#fff 0%,#e6c875 60%,#d4af37 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  #main-header{transition:background .5s var(--ease),border-color .5s,backdrop-filter .5s;border-bottom:1px solid transparent}
+  #main-header.scrolled{background:rgba(12,11,10,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:rgba(255,255,255,.08)}
+  .nav-link{position:relative;padding:4px 0}
+  .nav-link::after{content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1px;background:#d4af37;transition:right .4s var(--ease)}
+  .nav-link:hover::after,.nav-link.current::after{right:0}
+  
+  /* Reveal seguro: visible por defecto */
+  .reveal{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  body.js-ready .reveal:not(.on){opacity:0;transform:translateY(24px)}
+  body.js-ready .reveal.on{opacity:1;transform:none}
+
+  .btn{position:relative;overflow:hidden;transition:transform .3s var(--ease),background .3s}
+  .btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.98)}
+
+  /* Slider antes / después */
+  .ba{position:relative;overflow:hidden;user-select:none;touch-action:pan-y;cursor:ew-resize}
+  .ba-after{position:absolute;inset:0 auto 0 0;width:50%;overflow:hidden}
+  .ba-after img{position:absolute;inset:0 auto 0 0;height:100%;max-width:none;object-fit:cover}
+  .ba-line{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#d4af37;z-index:20;transform:translateX(-50%)}
+  .ba-knob{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;border-radius:50%;background:#e6c875;color:#0c0b0a;display:flex;align-items:center;justify-content:center;box-shadow:0 0 25px rgba(212,175,55,.45)}
+  </style>
+</head>
+<body class="bg-warm-950 text-slate-200 font-sans antialiased selection:bg-gold-400 selection:text-black min-h-screen flex flex-col overflow-x-hidden">
+
+<header id="main-header" class="fixed top-0 z-40 w-full scrolled">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
+    <a href="index.html" aria-label="Luca Monteserin, inicio"><img src="15.png" alt="Luca Monteserin" width="160" height="48" class="h-10 sm:h-12 w-auto contrast-125"></a>
+    <nav class="hidden lg:flex items-center gap-8 text-xs tracking-widest text-slate-200 font-medium" aria-label="Principal">
+      <a class="nav-link" href="galeria.html">Galería</a>
+      <a class="nav-link current" href="metodo.html">Equipo</a>
+      <a class="nav-link" href="index.html#agenda">Agenda</a>
+      <a class="nav-link" href="index.html#presupuesto">Presupuesto</a>
+      <a class="nav-link" href="index.html#contacto">Contacto</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="index.html#agenda" class="btn hidden sm:inline-flex items-center gap-2 px-6 py-2.5 text-xs font-semibold tracking-widest text-warm-950 bg-gold-400 hover:bg-gold-300 rounded-full"><i data-lucide="calendar" class="w-4 h-4"></i>Reservar fecha</a>
+      <button id="menu-btn" class="lg:hidden p-2 text-slate-200" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden glass-panel px-6 py-6 space-y-4 text-sm font-medium tracking-widest">
+    <a href="galeria.html" class="block">Galería</a>
+    <a href="metodo.html" class="block text-gold-400 font-bold">Equipo</a>
+    <a href="index.html#agenda" class="block">Agenda</a>
+    <a href="index.html#presupuesto" class="block">Presupuesto</a>
+    <a href="index.html#contacto" class="block">Contacto</a>
+    <a href="index.html#agenda" class="flex justify-center gap-2 w-full py-3 text-xs font-bold text-warm-950 bg-gold-400 rounded-full">Reservar fecha</a>
+  </div>
+</header>
+
+<main class="flex-grow pt-32 pb-24">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+    <!-- Encabezado de la página -->
+    <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+      <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-gold-400 bg-gold-500/10 px-4 py-1.5 rounded-full border border-gold-500/20">Dirección & Equipo de Cobertura</span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white mt-6 mb-6 leading-tight">
+        Nuestro Método & <span class="gold-text">Equipo de Trabajo</span>
+      </h1>
+      <p class="text-slate-300 text-base leading-relaxed">
+        Unificamos la captura fotográfica y cinematográfica bajo una misma mirada estética. Te contamos cómo trabajamos antes, durante y después de tu evento.
+      </p>
+    </div>
+
+    <!-- Bloque 1: Luca Monteserín & El Enfoque Integrado (Rescatado del index) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-28">
+      <div class="reveal">
+        <h2 class="text-2xl sm:text-4xl font-bold text-white mb-6 leading-tight">
+          Un enfoque integrado para <br><span class="gold-text">tu fotografía y tu video</span>
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed mb-6">
+          Unificar tus fotos y tu video bajo una misma dirección garantiza coherencia estética en los tonos, espontaneidad en las expresiones y tranquilidad total para disfrutar tu fiesta sin interrupciones.
+        </p>
+        <p class="text-slate-300 text-base leading-relaxed mb-8">
+          No forzamos situaciones ni imponemos poses acartonadas. Acompañamos el ritmo orgánico de la celebración para retratar emociones reales tal como sucedieron.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-start gap-4 p-5 rounded-3xl glass-panel">
+            <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="camera" class="w-5 h-5"></i></div>
+            <div>
+              <h3 class="font-bold text-white text-base">Fotografía espontánea</h3>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Capturamos emociones genuinas, risas espontáneas y los detalles que hacen único tu evento, sin poses forzadas.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-5 rounded-3xl glass-panel">
+            <div class="p-3 rounded-2xl bg-gold-500/10 text-gold-400 mt-0.5"><i data-lucide="video" class="w-5 h-5"></i></div>
+            <div>
+              <h3 class="font-bold text-white text-base">Cine y filmación 4K</h3>
+              <p class="text-sm text-slate-300 mt-1 leading-relaxed">Movimientos orgánicos, gradación de color cinematográfico y mezcla de audio ambiental envolvente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
+          <img src="DSC_8284.png" alt="Luca Monteserin, fotógrafo y filmmaker" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-warm-950 via-transparent to-transparent"></div>
+          <figure class="absolute bottom-6 left-6 right-6 p-6 glass-panel rounded-2xl">
+            <blockquote class="text-sm text-gold-300 font-medium">"Sincronizamos la mirada fotográfica y cinematográfica para contar historias auténticas."</blockquote>
+            <figcaption class="text-xs text-slate-300 tracking-widest mt-2">Luca Monteserin · Dirección Audiovisual</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloque 2: Profesionales y Equipo de Trabajo -->
+    <div class="mb-28 border-t border-white/10 pt-20">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-gold-400">Detrás de Cámara</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2 mb-4">Los Profesionales</h2>
+        <p class="text-slate-300 text-sm">Contamos con un equipo técnico coordinado para que ningún instante quede fuera de cuadro.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel p-8 rounded-3xl reveal flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6">
+              <i data-lucide="users" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Segundos Fotógrafos</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Mientras la cámara principal sigue el eje central del festejo, el segundo fotógrafo registra los detalles imprevistos, la diversión en las mesas y las miradas de tus invitados.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gold-400 uppercase tracking-widest mt-6">Cobertura Multicámara</span>
+        </div>
+
+        <div class="glass-panel p-8 rounded-3xl reveal flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6">
+              <i data-lucide="video" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Filmmakers & Operadores de Drone</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Operadores especializados con gimbals de estabilización suave, sonido inalámbrico directo y pilotos de dron para planos aéreos majestuosos del salón y la llegada.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gold-400 uppercase tracking-widest mt-6">Cine 4K HDR</span>
+        </div>
+
+        <div class="glass-panel p-8 rounded-3xl reveal flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-gold-500/10 text-gold-400 flex items-center justify-center mb-6">
+              <i data-lucide="hard-drive" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Edición & Seguridad de Datos</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              Todo el material capturado pasa inmediatamente por un doble protocolo de backup en discos seguros, selección minuciosa y calibración de color cuadro por cuadro.
+            </p>
+          </div>
+          <span class="text-[11px] font-mono text-gold-400 uppercase tracking-widest mt-6">Respaldo Inmediato</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloque 3: Comparador Interactivo RAW vs. Color Signature (Rescatado del index) -->
+    <div class="border-t border-white/10 pt-20">
+      <div class="text-center max-w-2xl mx-auto mb-10 reveal">
+        <span class="text-[11px] font-mono uppercase tracking-[0.25em] text-gold-400">Edición de Autor</span>
+        <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2 mb-3">Color Signature</h2>
+        <p class="text-slate-300 text-sm">Deslizá la barra central o usá las flechas del teclado para comparar el archivo crudo original con nuestra edición de tonos atemporales.</p>
+      </div>
+
+      <div id="ba" class="ba reveal rounded-3xl shadow-2xl border border-white/10 aspect-[16/9] max-w-5xl mx-auto" role="slider" tabindex="0" aria-label="Comparador antes y después" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Foto original sin editar" class="w-full h-full object-cover grayscale contrast-75 brightness-90" draggable="false">
+        <span class="absolute bottom-4 left-4 z-10 px-3 py-1 rounded-full bg-black/70 text-white text-[11px] tracking-widest">Original / RAW</span>
+        <div id="ba-after" class="ba-after">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80" alt="Foto con edición de color" draggable="false">
+          <span class="absolute bottom-4 left-4 z-10 px-3 py-1 rounded-full bg-gold-400 text-warm-950 text-[11px] font-bold tracking-widest">Color Signature</span>
+        </div>
+        <div id="ba-line" class="ba-line"><div class="ba-knob"><i data-lucide="chevrons-left-right" class="w-4 h-4"></i></div></div>
+      </div>
+
+      <div class="mt-16 text-center reveal">
+        <a href="index.html#agenda" class="btn inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gold-400 hover:bg-gold-300 text-warm-950 font-bold text-xs uppercase tracking-widest shadow-xl">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Consultar disponibilidad en la agenda</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="border-t border-white/5 py-12 text-xs text-slate-300">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <img src="15.png" alt="" width="120" height="32" class="h-8 w-auto opacity-90">
+      <span>Luca Monteserin © <span id="year">2026</span> · Foto y video</span>
+    </div>
+    
+    <div class="flex items-center gap-6">
+      <a href="https://instagram.com/lucamonteserin" target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 text-white flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+        </svg>
+        <span>@lucamonteserin</span>
+      </a>
+
+      <a id="wa-footer" href="https://wa.me/5493492591128?text=Hola!%20Quisiera%20consultar%20disponibilidad%20para%20un%20evento." target="_blank" rel="noopener noreferrer" class="hover:text-gold-300 text-white flex items-center gap-2 group transition-colors">
+        <svg class="w-5 h-5 flex-shrink-0 transition-transform group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2ZM12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67ZM8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7.02 8.48 7.02 9.7C7.02 10.93 7.91 12.11 8.03 12.27C8.16 12.44 9.77 14.93 12.25 15.99C14.31 16.88 14.73 16.7 15.18 16.66C15.62 16.62 16.62 16.07 16.83 15.49C17.03 14.9 17.03 14.4 16.97 14.3C16.91 14.19 16.74 14.13 16.49 14C16.24 13.88 15.01 13.27 14.78 13.19C14.56 13.1 14.39 13.06 14.23 13.31C14.06 13.56 13.59 14.13 13.45 14.3C13.31 14.46 13.17 14.48 12.92 14.36C12.67 14.23 11.87 13.97 10.93 13.13C10.19 12.47 9.69 11.66 9.55 11.41C9.41 11.16 9.53 11.03 9.66 10.9C9.77 10.79 9.91 10.61 10.03 10.46C10.16 10.32 10.2 10.22 10.28 10.05C10.37 9.88 10.32 9.74 10.26 9.62C10.2 9.49 9.73 8.33 9.53 7.86C9.33 7.4 9.14 7.46 8.99 7.45C8.84 7.45 8.68 7.33 8.53 7.33Z"/>
+        </svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('js-ready');
+  if (window.lucide) lucide.createIcons();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Menú móvil
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.getElementById('menu-btn');
+  if (btn && menu) {
+    btn.onclick = () => menu.classList.toggle('hidden');
+  }
+
+  // Header scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-header').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Reveal observer
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+  }), { threshold: .05 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Slider Antes / Después
+  const box = document.getElementById('ba');
+  const after = document.getElementById('ba-after');
+  const line = document.getElementById('ba-line');
+  if (box && after && line) {
+    const img = after.querySelector('img');
+    let drag = false, pos = 50;
+    const fit = () => { img.style.width = box.getBoundingClientRect().width + 'px'; };
+    function set(p) {
+      pos = Math.max(0, Math.min(100, p));
+      after.style.width = pos + '%';
+      line.style.left = pos + '%';
+      box.setAttribute('aria-valuenow', Math.round(pos));
+    }
+    const fromX = x => {
+      const r = box.getBoundingClientRect();
+      set((x - r.left) / r.width * 100);
+    };
+    box.addEventListener('pointerdown', e => { drag = true; box.setPointerCapture(e.pointerId); fromX(e.clientX); });
+    box.addEventListener('pointermove', e => { if (drag) fromX(e.clientX); });
+    ['pointerup', 'pointercancel'].forEach(t => box.addEventListener(t, () => drag = false));
+    box.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') set(pos - 5);
+      if (e.key === 'ArrowRight') set(pos + 5);
+    });
+    window.addEventListener('resize', fit);
+    fit();
+    set(50);
+  }
+});
+</script>
+</body>
+</html>
